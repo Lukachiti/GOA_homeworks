@@ -1,0 +1,12 @@
+#a1:hover {
+    color: aqua;
+
+}
+
+#a2:visited {
+    color: rgb(206, 13, 13);
+}
+
+#a2:hover {
+    color: chartreuse;
+}

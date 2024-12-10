@@ -1,0 +1,32 @@
+body {
+    background-color: rgb(169, 89, 243);
+    justify-content: center;
+    display: flex;
+}
+.par {
+    height: 600px;
+    width: 400px;
+    background-color: rgb(73, 58, 214);
+    justify-content: space-evenly;
+    border-radius: 10px;
+    margin-top: 100px;
+}
+
+.ch {
+    text-decoration: none;
+    margin: 250px 0 0 150px;
+    justify-content: space-around;
+
+
+}
+
+a {
+    color: rgb(138, 120, 18);
+    text-decoration: none;
+    font-size: 20px;
+    margin-bottom: 30px;
+    
+    
+
+
+}
