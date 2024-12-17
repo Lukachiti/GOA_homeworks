@@ -1,0 +1,31 @@
+body {
+    background-color: rgb(160, 160, 211);
+    display: flex;
+    justify-content: center;
+
+}
+div {
+    margin-top: 200px;
+    border-radius: 10px;
+    box-shadow: 5px 5px gray;
+    background-color: rgb(191, 191, 207);
+    width: fit-content;
+    height: 200px;
+}
+
+button {
+    margin: 10px;
+    background-color: rgb(39, 39, 77);
+    padding: 7px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    color: white;
+}
+h1 {
+    margin-left: 90px;
+}
+
+
+
+    
