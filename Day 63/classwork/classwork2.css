@@ -1,0 +1,32 @@
+img {
+    height: 200px;
+    
+}
+body {
+    display: flex;
+    justify-content: center;
+}
+#d {
+    margin-top: 200px;
+    height: 200px;
+    width: 200px;
+}
+
+img:active {
+    height: 190px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+#dd {
+    height: 200px;
+    width: 200px;
+    background-color: rgb(97, 59, 146);
+    margin-top: 200px;
+    margin-left: 100px;
+    border-radius: 10px;
+}
+
+h1 {
+    margin-left: 90px;
+}

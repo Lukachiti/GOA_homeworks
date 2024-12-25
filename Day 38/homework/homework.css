@@ -1,0 +1,54 @@
+body {
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+
+/* The animation code */
+@keyframes heart {
+    10%   {width: 110px;
+        height: 100px;
+    }
+    20%   {width: 100px;
+        height: 110px;
+    }
+    30%   {width: 110px;
+        height: 100px;
+    }
+    40%   {width: 100px;
+        height: 110px;
+    }
+    50%   {width: 110px;
+        height: 100px;
+    }
+    60%   {width: 100px;
+        height: 110px;
+    }
+    70%   {width: 110px;
+        height: 100px;
+    }
+    80%   {width: 100px;
+        height: 110px;
+    }
+    90%   {width: 110px;
+        height: 100px;
+    }
+    100%   {width: 100px;
+        height: 110px;
+    }
+    
+}
+  
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    text-align: center;
+    animation-name: heart;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
