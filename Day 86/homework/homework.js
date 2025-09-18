@@ -1,0 +1,25 @@
+document.getElementById('a').style.height = '70px'
+document.getElementById('b').style.height = '60px'
+document.getElementById('c').style.height = '50px'
+document.getElementById('d').style.height = '40px'
+document.getElementById('e').style.height = '30px'
+document.getElementById('f').style.height = '20px'
+document.getElementById('g').style.height = '10px'
+document.getElementById('h').style.height = '7px'
+document.getElementById('i').style.height = '6px'
+document.getElementById('j').style.height = '5px'
+
+document.getElementsByClassName('a').style.height = '700px'
+document.getElementsByClassName('b').style.height = '600px'
+document.getElementsByClassName('c').style.height = '500px'
+document.getElementsByClassName('d').style.height = '400px'
+document.getElementsByClassName('e').style.height = '300px'
+document.getElementsByClassName('f').style.height = '200px'
+document.getElementsByClassName('g').style.height = '100px'
+document.getElementsByClassName('h').style.height = '70px'
+document.getElementsByClassName('i').style.height = '60px'
+document.getElementsByClassName('j').style.height = '50px'
+
+document.body.li.div.style.color = 'red'
+
+

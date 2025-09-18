@@ -1,0 +1,66 @@
+body {
+    justify-content: center;
+    background-image: url(https://content.wepik.com/statics/194479587/preview-page0.jpg);
+    display: flex;
+}
+
+.parent {
+    
+    width: 700px;
+    justify-content: center;
+    display: flex;
+    margin-top: 70px;
+    height: 630px;
+    border-radius: 10px;
+    background-color: rgb(231, 231, 125);
+    
+    
+
+}
+.child {
+    
+    margin: 100px;
+    width: 300px;
+    height: 400px;
+    border-radius: 10px;
+    background-color: azure;
+    box-shadow: 5px 10px;
+
+    
+
+}
+img {
+    margin: 20px;
+    margin-left: 26px;
+    border-radius: 8px;
+
+}
+#b {
+    font-size: 13px;
+    margin: 4px;
+    margin-left: 15px;
+}
+#a {
+    font-size: 10px;
+    margin: 4px;
+    margin-left: 15px;
+
+}
+
+button {
+    background-color: yellow;
+    margin-left: 10px;
+    border-radius: 7px;
+    padding: 5px;
+    border: none;
+    
+
+}
+button:active {
+    background-color: rgb(187, 115, 22)
+}
+h2 {
+    margin: 1px;
+    margin-left: 15px;
+    font-style: unset;
+}

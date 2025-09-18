@@ -1,0 +1,71 @@
+body {
+    background-color: aquamarine;
+    
+}
+.a {
+    background-color: blue;
+    color: azure;
+    height: 100px;
+    width: 85px;
+    margin: 50px;
+
+}
+
+.a:hover {
+    background-color: rgb(48, 48, 167);
+    color: blue;
+    
+}
+
+
+.b {
+    background-color: blue;
+    color: azure;
+    inline-size: 100px;
+    height: 60px;
+    margin: 50px;
+    
+}
+
+.b:hover {
+    background-color: rgb(48, 48, 167);
+    color: blue;
+    transform-origin: center;
+    transform: rotate(60deg);
+
+    
+}
+
+.c {
+    background-color: blue;
+    color: azure;
+    height: 100px;
+    width: 85px;
+    margin: 50px;
+
+}
+
+.c:hover {
+    background-color: rgb(48, 48, 167);
+    color: blue;
+    transform: translate(50px, 60px);
+    
+}
+
+
+.d {
+    background-color: blue;
+    color: azure;
+    height: 100px;
+    width: 85px;
+    margin: 50px;
+
+}
+
+.d:hover {
+    background-color: rgb(48, 48, 167);
+    color: blue;
+    transform: scale(1.5);
+}
+
+

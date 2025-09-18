@@ -1,0 +1,37 @@
+h1 {
+    color: black;
+    margin-left: 30px;
+    border-radius: 5px;
+    background-color: rgb(156, 84, 223);
+    width: 100px;
+    text-shadow: 3px 3px rgb(153, 117, 201);
+    height: 50px;
+}
+
+
+
+
+input {
+    margin: 30px;
+    background-color: brown;
+    border-radius: 5px;
+}
+select {
+    margin: 30px;
+}
+body {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(56, 17, 92);
+}
+
+form {
+    background-color: rgb(81, 43, 187);
+    margin-top: 100px;
+    border-radius: 10px;
+    box-shadow: 8px 8px rgb(39, 9, 68);
+}
+
+button {
+    margin: 30px;
+}

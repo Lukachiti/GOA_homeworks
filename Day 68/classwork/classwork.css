@@ -1,0 +1,38 @@
+<div class="A" ></div>
+<div class="B" ></div>
+<div class="C" ></div>
+<style>
+  .A {
+    width: 160px;
+    height: 230px;
+    background-color: #F3AC3C;
+    border-width: 10px;
+    border-color: #F3AC3C;
+    position: fixed;
+    top: 35;
+    left: 120;
+    }
+  .B {
+    width: 120px;
+    height: 189px;
+    background-color: #2F5A76;
+    border-width: 10px;
+    border-color: #F3AC3C;
+    position: fixed;
+    top: 55px;
+    left: 140px;
+    }
+  .C {
+    width: 360px;
+    height: 60px;
+    background-color: #F3AC3C;
+    border-width: 10px;
+    border-color: #F3AC3C;
+    position: fixed;
+    top: 120;
+    left: 20
+    }
+  body {
+    background: #2F5A76;
+  }
+</style>

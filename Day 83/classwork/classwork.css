@@ -1,0 +1,32 @@
+<div class="A"><div class="b"></div>
+<div class="c"></div>
+
+<style>
+  .A {
+    width: 140px;
+    height: 100%;
+    background: #EA9A52;
+    position: absolute;
+    top: 0;
+    left: 130;
+  }
+  .b{
+    width: 140px;
+    height: 20px;
+    background: #96551A;
+    position: absolute;
+    top: 140;
+    left: 0;
+  }
+  .c {
+    width: 70px;
+    height: 70px;
+    background: #96551A;
+    position: absolute;
+    top: 115;
+    left: 35;
+  }
+  body{
+    background: #96551A;
+    }
+</style>

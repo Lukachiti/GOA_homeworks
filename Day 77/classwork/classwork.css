@@ -1,0 +1,41 @@
+<div class="a"></div>
+<div class="b"></div>
+<div class="c"></div>
+<div class="d"></div>
+
+<style>
+  .a {
+    width: 120px;
+    height: 120px;
+    background: #46487C;
+    border-radius: 100%;
+    position: absolute;
+    left: 140;
+    top: 180;
+  }
+  .b {
+    width: 60px;
+    height: 120px;
+    background: #469DBA;
+    position: absolute;
+    left: 60px;
+    top: 60px;
+  }
+  .c {
+    width: 60px;
+    height: 120px;
+    background: #469DBA;
+    position: absolute;
+    right: 60px;
+    bottom: 60px;
+  }
+
+  .d {
+    width: 280px;
+    height: 60px;
+    background: #469DBA;
+    position: absolute;
+    top: 120;
+    left: 60px;
+  }
+</style>

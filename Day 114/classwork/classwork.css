@@ -1,0 +1,95 @@
+<div class="a"></div>
+<div class="b"></div>
+<div class="c"></div>
+<div class="d"></div>
+<div class="e"></div>
+<div class="f"></div>
+<div class="g"></div>
+<div class="h"></div>
+<div class="i"></div>
+<div class="j"></div>
+<style>
+  .a {
+    width: 20px;
+    height: 180px;
+    background: #F7CB71;
+    position:absolute;
+    top:60px;
+    left:90px;
+  }
+  .b {
+    width: 20px;
+    height: 180px;
+    background: #F7CB71;
+    position:absolute;
+    top:60px;
+    right:90px;
+  }
+  .c {
+    width: 180px;
+    height: 20px;
+    background: #F7CB71;
+    position:absolute;
+    top:60px;
+    right:90px;
+  }
+  .d {
+    width: 200px;
+    height: 20px;
+    background: #F7CB71;
+    position:absolute;
+    bottom:60px;
+    right:90px;
+  }
+  .e {
+    width: 20px;
+    height: 140px;
+    background: #F7CB71;
+    position:absolute;
+    top:60px;
+    left:130px;
+  }
+  .f {
+    width: 20px;
+    height: 100px;
+    background: #F7CB71;
+    position:absolute;
+    top:100px;
+    right:130px;
+  }
+  .g {
+    width: 20px;
+    height: 60px;
+    background: #F7CB71;
+    position:absolute;
+    top:100px;
+    left:170px;
+  }
+  .h {
+    width: 140px;
+    height: 20px;
+    background: #F7CB71;
+    position:absolute;
+    bottom:100px;
+    right:130px;
+  }
+  .i {
+    width: 100px;
+    height: 20px;
+    background: #F7CB71;
+    position:absolute;
+    top:100px;
+    right:130px;
+  }
+  .j {
+    width: 60px;
+    height: 20px;
+    background: #F7CB71;
+    position:absolute;
+    top:140px;
+    left:170px;
+  }
+  body{
+    background:#6592CF;
+  }
+</style>

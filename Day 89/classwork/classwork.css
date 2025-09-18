@@ -1,0 +1,76 @@
+<div class="a"><div class="a1"></div></div>
+
+<div class="a2"><div class="a3"></div></div>
+
+<div class="a4"><div class="a5"></div></div>
+
+<div class="a6"><div class="a7"></div></div>
+
+<div class="a8"><div class="a9"></div></div>
+
+
+<style>
+
+  .a {
+    width: 60px;
+    height: 60px;
+    background: #51A499;
+    position: absolute;
+    top: 20px;
+    left: 70px;
+
+
+  }
+  .a1 {
+    background: #EAC049;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 20px;
+    left:20px;
+  }
+
+  .a2 {
+    width: 60px;
+    height: 60px;
+    background: #51A499;
+    position: absolute;
+    top: 20px;
+    right: 70px;
+
+
+  }
+  .a3 {
+    background: #EAC049;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 20px;
+    left:20px;
+  }
+
+  .a4 {
+    width: 60px;
+    height: 60px;
+    background: #51A499;
+    position: absolute;
+    bottom: 20px;
+    left: 70px;
+
+
+  }
+  .a5 {
+    background: #EAC049;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 20px;
+    left:20px;
+  }
+  .a6 {
+    width: 60px;
+    height: 60px;
+    background: #51A499;
+    position: absolute;
+    bottom: 20px;
+    right: 70px;

@@ -1,0 +1,25 @@
+<div class="a"></div>
+<div class="b"></div>
+<style>
+  .a {
+    width: 340px;
+    height: 60px;
+    background:#FFFFFF;
+    border: solid, #394257, 10px;
+    border-radius:20px;
+    top:110px;
+    position:absolute;
+    left:20;
+  }
+  .b {
+    position:absolute;
+    height:45px;
+    background:#394257;
+    width: 10px;
+    top:127;
+    left:45px
+  }
+  body {
+    background:#F0CD48;
+  }
+</style>

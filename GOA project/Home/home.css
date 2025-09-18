@@ -1,0 +1,94 @@
+#Nav_bar {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    top: 0px;
+    background: #2B2A30;
+    left: 0px;
+
+}
+#Nav_bar h1 {
+    color: #7ECE84;
+    font-size: 30px;
+    font: bold;
+    margin: 20px;
+
+
+}
+#Nav_bar button {
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 20px;
+    border-radius: 6px;
+    border: none;
+    
+    
+    
+}
+
+
+#Home {
+    background-color: #413F48;
+}
+#Home:hover {
+    background-color: #545357;
+}
+#More_about {
+    background-color: #2B2A30;
+}
+#More_about:hover {
+    background-color: #545357;
+}
+#Join {
+    background-color: #7ECE84;
+}
+#Join:hover {
+    background-color: #47cc52;
+}
+#Links {
+    position: absolute;
+    height: 70px;
+    width: fit-content;
+    right: 0px;
+}
+a {
+    color: white;
+    font: bold;
+    text-decoration: none;
+}
+body{
+    background-color: #1E1D24;
+    justify-content: center;
+    display: flex;
+}
+#Introduction {
+    margin-top: 80px;
+    height: 320px;
+    width: 550px;
+    background-color: #413F48;
+    display: flex;
+    border-radius: 9px;
+    position: relative;
+}
+#Intro {
+    margin: 30px;
+    text-align: center;
+}
+
+#Intro h2{
+    color: white;
+    font: bold;
+
+}
+#Intro p{
+    color: #7ECE84;
+    font: bold;
+
+}
+img {
+    border-top-right-radius: 9px;
+    border-bottom-right-radius: 9px;
+}
+

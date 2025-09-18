@@ -1,0 +1,21 @@
+body {
+    justify-content: center;
+    display: flex;
+}
+
+div {
+    background-color: rgb(31, 102, 17);
+    inline-size: 70px;
+    height: 70px;
+    transition-property: all;
+    transition-duration: 500ms;
+    
+
+}
+
+div:hover {
+    transform: rotate(90deg);
+    background-color: blue;
+    
+
+}

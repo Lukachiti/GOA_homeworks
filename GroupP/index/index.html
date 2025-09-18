@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Carlito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/index/style.css">
+</head>
+<body>
+
+        <!--introduction-->
+        
+        <div id="intro">
+            <div class="intro-overlay">
+                <h1>To-Do List</h1>
+                <p><b>
+                    Welcome to your personal productivity booster! <br>
+                    This site is designed to help you stay motivated and focused <br>
+                    by organizing your goals into manageable tasks.<br>
+                    Ready to take control of your day? Let's get started!
+                </b></p>
+            </div>
+        </div>
+        
+        
+        <!--modes-->
+        <h2>Modes:</h2>
+        <div id="modes">
+            <div id="mode_weekly">
+                <h3>Weekly</h3>
+                <p><b>Create a to-do list based on the days of the week.<br>
+                    Plan your entire week in advance!</b></p>
+                <button onclick="selectWeekly()" id="weekly_button">Select</button>
+            </div>
+            
+            <div id="mode_daily">
+                <h3>Daily tasks</h3>
+                <p><b>Receive three random tasks to complete each day.<br>
+                    Stay productive, one day at a time!</b></p>
+                <button onclick="selectDaily()" id="daily_button">Select</button>
+            </div>
+            
+            <div id="mode_challenge">
+                <h3>Challenge</h3>
+                <p><b>Create tough challenges for yourself,<br>
+                    and complete them within a set time!</b></p>
+                <button onclick="selectChallenge()" id="challenge_button">Select</button>
+            </div>
+            
+            <div id="mode_casual">
+                <h3>Casual</h3>
+                <p><b>Create a to do list, set goals for your-self <br>
+                and complete them by the end of the day!</b></p>
+                <button onclick="selectCasual()" id="casual_button">Select</button>
+            </div>
+        </div>
+        
+    </div>
+
+        <button onclick="start()" id="start">Get started</button>
+
+        <div id="info">
+            <img src="/info.png" alt="Customer Service">
+            <div class="info-text">
+                <h2>What You Need to Know About This Site</h2>
+                <p><b>
+                    - You can choose different task modes: Weekly, Daily, or Challenge.<br>
+                    - You don't need to be perfect—just consistent<br>
+                    - You can always switch between modes as you prefer.<br>
+                    - Our goal is to keep you productive and focused.
+                </b></p>
+            </div>
+        </div>
+
+        <div id="Service">
+            <h2>Customer Service</h2>
+            <p><b>
+                Have any feedback, questions, or complaints?<br>
+                Our customer support team is here to help you.<br>
+                Expect a response within 1-3 business days after submitting your message.
+            </b></p>
+            <button id="feedback"><b>feedback</b></button>
+            <img src="https://www.howandwhat.net/wp-content/uploads/2017/08/Service.jpg" alt="Customer Service">
+        </div>
+
+
+        
+        
+
+        <!--footer-->
+        <div id="footer">
+            <h3>Site presented by:</h3>
+            <p>Kote Wiklauri<br>Luka Citidze<br>Sergi Cixradze<br>Giorgi Nozadze</p>
+            <p><b>TDL</b> is a site these 4 people worked on to make your life easier!<br>
+                Site is still under development so if you encounter any bugs let us know :)</p>
+            
+            <button onclick="location.href='/complaint/complaint.html'">feedback</button>
+
+        </div>
+        <script src="/index/script.js"></script>
+</body>
+</html>

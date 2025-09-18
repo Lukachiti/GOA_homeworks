@@ -1,0 +1,31 @@
+body {
+    border-style: dotted;
+    border-color: darkcyan;
+    background-color: blueviolet;
+
+}
+.list {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center; 
+    padding: 10px 0; 
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center; 
+    padding: 10px 0; 
+}
+
+.nav-item {
+    color: rgb(241, 163, 163);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+}
+
+.nav-item:hover {
+    background-color: #d64545;
+    border-radius: 5px;
+}

@@ -1,0 +1,16 @@
+body {
+    justify-content: center;
+    display: flex;
+}
+div {
+    margin-top: 200px;
+    height: 500px;
+    width: 350px;
+    justify-content: space-between;
+
+}
+input {
+    margin-top: 40px;
+    height: 25px;
+
+}

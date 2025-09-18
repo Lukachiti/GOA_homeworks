@@ -1,0 +1,14 @@
+.parent {
+    border-color: brown;
+    border: double;
+    height: 800px;
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+}
+.child {
+    background-color: cadetblue;
+    border-color: aqua;
+    border: double;
+    
+    
+}

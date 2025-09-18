@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    font-family: monospace;
+}
+body {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-image: url("https://img.freepik.com/free-vector/watercolor-nature-background-with-leaves_52683-59449.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+h1{
+    color: #3b3b3b;
+    font-size: 40px;
+    margin-top: 30px;
+}
+#Main {
+    width: 450px;
+    border: solid, #93e2e4;
+    height: 550px;
+    margin-top: 110px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(1px);
+    
+}
+
+#UpdateButton {
+    width: 120px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(45deg, #007d83, #02b2bb);
+    font-size: 15px;
+    color: white;
+}
+#ClearButton {
+    width: 120px;
+    height: 40px;
+    border-radius: 8px;
+    border: solid, 2px, #007d83;
+    font-size: 15px;
+    color: #007d83;
+    margin-top: 20px;
+}
+#ClearButton:hover {
+    width: 128px;
+    border-color: #93e2e4;
+    transition: 100ms;
+}
+#UpdateButton:hover{
+    background: linear-gradient(45deg, #93e2e4, #48999b);
+    transition: 100ms;
+    width: 128px;
+    
+}
+#UpdateButton:active {
+    background: linear-gradient(45deg, #013d41, #007d83);
+    width: 128px;
+}
+#ClearButton:active {
+    border-color: #013d41;
+    color: #013d41;
+}
+input{
+    height: 40px;
+    width: 200px;
+    border: solid, 3px;
+    border-radius: 8px;
+    border-color: #007d83;
+    margin: 50px;
+}
+input:hover {
+    border-color: #48999b;
+    outline: none;
+}
+input:focus {
+    border-color: #48999b;
+    outline: none;
+}
+#ShowHide {
+    color: #013d41;
+    border: solid, 2px, #007d83;
+    border-radius: 4px;
+    margin: 20px;
+}
+#CurrentGrade {
+    margin: 20px;
+    color: #3b3b3b;
+    border: solid, 2px;
+    border-radius: 5px;
+    padding: 7px;
+}
+#Error {
+    color: red;
+}
+
+#Removelast{
+    width: 120px;
+    height: 40px;
+    border-radius: 8px;
+    border: solid, 2px, #007d83;
+    font-size: 15px;
+    color: #007d83;
+    margin-top: 20px;
+}
+
+#Removelast:hover {
+    width: 128px;
+    border-color: #93e2e4;
+    transition: 100ms;
+}
+
+#Removelast:active {
+    border-color: #013d41;
+    color: #013d41;
+}

@@ -1,0 +1,76 @@
+.parent {
+    display: flex;
+    background-color: cadetblue;
+    justify-content: flex-start;
+    
+
+    
+    
+   
+}
+
+
+
+.child {
+    
+    
+    
+    
+    justify-content: space-between;
+    margin-left: 30%;
+
+    
+    
+    
+    
+    
+    
+    
+}
+
+h1 {
+    
+    color: rgb(21, 50, 51);
+}
+
+a {
+    
+    color: antiquewhite;
+    font-family: cursive;
+    text-decoration: none;
+    margin: 0 5px;
+    display: inline-block;
+    line-height: 100%;
+    padding-top: 12px;
+    padding-bottom: 5px;
+    margin-top: 18px;
+    
+    
+
+
+    
+    
+}
+
+a:hover {
+    color: rgb(0, 0, 0);
+
+}
+
+
+@media  (max-width: 550px) {
+    .child {
+        margin-left: 10%;
+    }
+}
+
+
+
+@media  (max-width: 410px) {
+    a {
+        margin-top: 0px;
+        
+    }
+}
+
+

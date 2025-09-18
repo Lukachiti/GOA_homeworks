@@ -1,0 +1,51 @@
+css battle
+
+body {
+    background-color: #6D62BA;
+  }
+  .A {
+
+    height: 88px;
+    background-color: #A1E6E4;
+    position: fixed;
+    width: 30px;
+    left: 94px;
+    top:106
+  }
+
+  .B {
+    height: 88px;
+    background-color: #A1E6E4;
+    position: fixed;
+    width: 30px;
+    left: 275px;
+    top:106
+  }
+
+  .C {
+    width: 90px;
+    height: 90px;
+    background-color: #A1E6E4;
+    border-radius: 100%;
+    position: fixed;
+    left: 154px;
+    top: 106px;
+  }
+
+  .D {
+    height: 30px;
+    background-color: #A1E6E4;
+    position: fixed;
+    width: 88px;
+    left: 155px;
+    top:46
+  }
+
+  .E {
+    height: 30px;
+    background-color: #A1E6E4;
+    position: fixed;
+    width: 88px;
+    left: 155px;
+    top:226
+  }

@@ -1,0 +1,65 @@
+
+<div class="A"></div>
+<div class="A1"></div>
+<div class="A2"></div>
+<div class="A3"></div>
+<div class="A4"></div>
+<div class="A5"></div>
+<style>
+  body {
+    background: #4A9A86;
+    }
+  .A {
+    width: 80px;
+    height: 80px;
+    background: #4C4C6B;
+    position: absolute;
+    top: 110;
+    left: 60;
+  }
+  .A1 {
+    width: 80px;
+    height: 80px;
+    background: #FAE29E;
+    position: absolute;
+    top: 110;
+    left: 160;
+  }
+  .A2 {
+    width: 80px;
+    height: 80px;
+    background: #4C4C6B;
+    position: absolute;
+    top: 110;
+    left: 260;
+  }
+  .A3 {
+    height: 40px;
+    width: 40px;
+    background: #FAE29E;
+    border-radius: 100%;
+    position: fixed;
+    top: 130px;
+    left: 80;
+
+  }
+  .A4 {
+    height: 40px;
+    width: 40px;
+    background: #4C4C6B;
+    border-radius: 100%;
+    position: fixed;
+    top: 130px;
+    left: 180;
+
+  }
+  .A5 {
+    height: 40px;
+    width: 40px;
+    background: #FAE29E;
+    border-radius: 100%;
+    position: fixed;
+    top: 130px;
+    left: 280;
+
+  }

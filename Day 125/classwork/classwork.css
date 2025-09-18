@@ -1,0 +1,13 @@
+#centera {
+    height: 100px;
+    width: 100px;
+    background-color: rgb(17, 19, 107);
+    margin-top: 390px;
+    
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
