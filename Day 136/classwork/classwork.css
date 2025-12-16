@@ -1,0 +1,59 @@
+<div class="a"></div>
+<div class="b"></div>
+<div class="c"></div>
+<div class="d"></div>
+<div class="e"></div>
+<div class="f"></div>
+<style>
+  .a {
+    width: 100px;
+    height: 30px;
+    background: #4A9A86;
+    position: absolute;
+    top:30;
+    left:30;
+  }
+  .b {
+    width: 100px;
+    height: 30px;
+    background: #4A9A86;
+    position: absolute;
+    top:60;
+    left:60;
+  }
+  .c {
+    width: 100px;
+    height: 30px;
+    background: #4A9A86;
+    position: absolute;
+    top:30;
+    right:30;
+  }
+  .d {
+    width: 100px;
+    height: 30px;
+    background: #4A9A86;
+    position: absolute;
+    top:60;
+    right:60;
+  }
+  .e {
+    width: 220px;
+    height: 30px;
+    background: #4A9A86;
+    position: absolute;
+    top:90;
+    left:90;
+  }
+  .f {
+    width: 30px;
+    height: 180px;
+    background: #4A9A86;
+    position: absolute;
+    top:90;
+    left:185;
+  }
+  body {
+    background: #FFEA9B;
+  }
+</style>

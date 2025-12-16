@@ -1,0 +1,45 @@
+<div id="a"></div>
+<div id="b"></div>
+<div id="c"></div>
+<div id="d"></div>
+<style>
+  body {
+    background: #4763B1;
+  }
+  #a {
+    width: 100px;
+    height: 80px;
+    background: linear-gradient(to left, white 80%, black 20%);
+    position:absolute;
+    top:170;
+    left:80;
+
+  }
+  #b {
+    width: 100px;
+    height: 80px;
+    background: linear-gradient(to right, white 80%, black 20%);
+    position:absolute;
+    left:220;
+    top:50;
+
+  }
+  #c {
+    width: 80px;
+    height: 100px;
+    background: linear-gradient(to top, white 80%, black 20%);
+    position:absolute;
+    top:30;
+    left:100;
+
+  }
+  #d {
+    width: 80px;
+    height: 100px;
+    background: linear-gradient(to bottom, white 80%, black 20%);
+    position:absolute;
+    top:170;
+    left:220;
+
+  }
+</style>
