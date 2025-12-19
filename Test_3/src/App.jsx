@@ -6,8 +6,8 @@ function App() {
   return (
     <>
       <h1>{cnt}</h1>
-      <button onClick={() => {setCnt(cnt + 3.1415)}}>+</button>
-      <button onClick={() => {setCnt(cnt - 3.1415)}}>-</button>
+      <button onClick={() => {setCnt(cnt + 1)}}>+</button>
+      <button onClick={() => {setCnt(cnt - 1)}}>-</button>
     </>
 
   )
