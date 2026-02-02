@@ -27,7 +27,7 @@ function Projects() {
           {ProjectsObj.map((project) => {
             return (
               <div id={project.id} className="project-card">
-                <img src={project.image} />
+                <img src={project.imageSrc} alt={project.title} />
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
                 
