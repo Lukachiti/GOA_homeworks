@@ -17,10 +17,10 @@ function FB() {
             projects, and events. Connect with our community and be a part of
             our journey!
           </p>
-          <button className="FB-button" >
-            <a href="https://www.facebook.com/ekosdrone" target="_blank" className="FB-a">
-              See us on Facebook
-            </a>
+          <button className="FB-button" onClick={() => {
+            window.open("https://www.facebook.com/ekosdrone", "_blank");
+          }}>
+            See us on Facebook
           </button>
         </div>
       </section>
