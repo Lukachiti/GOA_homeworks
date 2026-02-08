@@ -6,7 +6,11 @@ body {
   flex-direction: column;
   min-width: 320px;
   min-height: 100vh;
-  background-color: rgb(47, 50, 44);
+
+  background-image: url("public/stars.png");
+  background-repeat: repeat;
+  background-size: auto;
+  background-position: top left;
 }
 #navbar {
   width: 100%;

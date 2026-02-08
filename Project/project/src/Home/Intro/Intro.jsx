@@ -6,7 +6,8 @@ function Intro() {
     <>
       <div className="container">
         <div className="intro-text">
-          <h1 className="intro-h1">Welcome to our website</h1>
+          <p className="intro-p1">By _Undefined_</p>
+          <h1 className="intro-h1">Robotech Official Website</h1>
           <p className="intro-p">
             Where we Invent, Build and Present Our Projects. Here youll see our
             latest innovations and achievements.
