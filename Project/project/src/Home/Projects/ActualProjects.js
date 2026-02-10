@@ -12,6 +12,7 @@ export const ProjectsObj = [
     title: "Line Following Car",
     description: "Car that follows a black line using infrared sensors.",
     author: "Everyone",
+    materials:["Battery", "Motor driver", "IR sensors", "Arduino", "Jumpers", "Motors", "Tires", "Car carcas"],
     imageSrc: lineFollowingCar,
   },
   {
@@ -19,6 +20,7 @@ export const ProjectsObj = [
     title: "Smart House",
     description: "Arduino-based smart house system.",
     author: "Everyone",
+    materials:["Esp32", "Light bulb", "Solar panel", "Jumpers", "RFID", "Servo motor"],
     imageSrc: smartHouse,
   },
   {
@@ -26,6 +28,7 @@ export const ProjectsObj = [
     title: "Eco-Friendly Park",
     description: "Energy-efficient park lighting system.",
     author: "Everyone",
+    materials:["Arduino", "Photoresistor Relay", "Breadboard", "Jumpers", "LED lights","Ultrasonic sensor"],
     imageSrc: smartPark,
   },
   {
