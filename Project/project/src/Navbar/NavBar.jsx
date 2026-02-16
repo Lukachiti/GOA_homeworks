@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 import "./NavBar.css";
 
 function NavBar() {
@@ -14,15 +14,15 @@ function NavBar() {
           
         </div>
         <div className="nav-links">
-          <a href="#home" id="home" className="link">
+          <Link to="/" id="home" className="link">
             Home
-          </a>
-          <a href="#about" className="link">
+          </Link>
+          <Link to="/about" className="link">
             About
-          </a>
-          <a href="#contact"  className="link">
+          </Link>
+          <Link to="/contact" className="link">
             Contact
-          </a>
+          </Link>
         </div>
       </div>
     </>

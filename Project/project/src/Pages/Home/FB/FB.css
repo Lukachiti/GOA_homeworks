@@ -1,0 +1,54 @@
+.FB-container {
+  background-color: #f0f2f5;
+  padding: 50px;
+  height: 500px;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  
+  margin-top: 60px;
+  margin-bottom: 60px;
+  background-color: rgba(77, 77, 77, 0.24);
+}
+.FB-text {
+  margin: auto;
+  display: flex;
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.FB-image {
+  border-radius: 50px;
+}
+.FB-button {
+  background-color: #a9fb45;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  padding: 15px 30px;
+  border: none;
+  font-size: small;
+  width: auto;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.FB-button:hover {
+  background-color: #d7ffa6;
+}
+a {
+  text-decoration: none;
+  
+}
+@media (max-width: 970px) {
+  .FB-container {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+  .FB-text {
+    margin-bottom: 20px;
+  }
+}

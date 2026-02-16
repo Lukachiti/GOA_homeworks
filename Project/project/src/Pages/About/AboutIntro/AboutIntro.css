@@ -1,0 +1,28 @@
+.About-container {
+    height: 500px;
+    margin-top:80px ;
+    display: flex;
+    
+}
+img {
+    border-radius: 16px;
+    width:auto;
+}
+aside {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    justify-content: center;
+    padding:40px;
+}
+aside h1 {
+    color:white;
+}
+aside p {
+    color:white;
+    font-weight: 600;
+    
+}
+hr {
+    margin: 30px;
+}

@@ -76,12 +76,7 @@ h3 {
   transition: 0.3s;
 }
 
-#home {
-  background-color: #383a39;
-}
-#home:hover {
-  background-color: #6d7763;
-}
+
 
 /* Logo */
 .logo {
