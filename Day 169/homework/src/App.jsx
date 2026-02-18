@@ -1,0 +1,69 @@
+import { useState } from "react";
+import Password from "./Password";
+import "./App.css";
+import Search from "./Search";
+import Cart from "./Cart";
+import Scores from "./Scores";
+
+function App() {
+  const products = [
+  { id: "SKU2001", name: "Bluetooth Portable Speaker", description: "Compact Bluetooth speaker with deep bass and 10h playtime.", price: 39.99, rating: 4.3, imageUrl: "https://images.pexels.com/photos/63703/pexels-photo-63703.jpeg" },
+  { id: "SKU2002", name: "Wireless Gaming Mouse", description: "Ergonomic RGB gaming mouse with adjustable DPI.", price: 29.99, rating: 4.5, imageUrl: "https://images.pexels.com/photos/2115256/pexels-photo-2115256.jpeg" },
+  { id: "SKU2003", name: "Mechanical Keyboard", description: "Backlit mechanical keyboard with blue switches.", price: 79.99, rating: 4.6, imageUrl: "https://images.pexels.com/photos/1772123/pexels-photo-1772123.jpeg" },
+  { id: "SKU2004", name: "Noise Cancelling Headphones", description: "Over-ear wireless headphones with active noise cancellation.", price: 129.99, rating: 4.7, imageUrl: "https://images.pexels.com/photos/3394650/pexels-photo-3394650.jpeg" },
+  { id: "SKU2005", name: "Smart Fitness Watch", description: "Track heart rate, steps and sleep with waterproof design.", price: 59.99, rating: 4.2, imageUrl: "https://images.pexels.com/photos/267394/pexels-photo-267394.jpeg" },
+  { id: "SKU2006", name: "4K Action Camera", description: "Ultra HD action camera with waterproof case.", price: 89.99, rating: 4.4, imageUrl: "https://images.pexels.com/photos/2111015/pexels-photo-2111015.jpeg" },
+  { id: "SKU2007", name: "Portable Power Bank 20000mAh", description: "High-capacity fast charging power bank.", price: 34.99, rating: 4.5, imageUrl: "https://images.pexels.com/photos/4526413/pexels-photo-4526413.jpeg" },
+  { id: "SKU2008", name: "USB-C Hub Adapter", description: "Multiport adapter with HDMI, USB 3.0 and SD reader.", price: 24.99, rating: 4.1, imageUrl: "https://images.pexels.com/photos/4792730/pexels-photo-4792730.jpeg" },
+  { id: "SKU2009", name: "1080p Webcam", description: "Full HD webcam with built-in microphone.", price: 49.99, rating: 4.3, imageUrl: "https://images.pexels.com/photos/374074/pexels-photo-374074.jpeg" },
+  { id: "SKU2010", name: "Smart LED Light Strip", description: "WiFi-controlled RGB LED strip with app control.", price: 19.99, rating: 4.2, imageUrl: "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg" },
+
+  { id: "SKU2011", name: "Gaming Chair", description: "Ergonomic gaming chair with lumbar support.", price: 199.99, rating: 4.6, imageUrl: "https://images.pexels.com/photos/279746/pexels-photo-279746.jpeg" },
+  { id: "SKU2012", name: "Laptop Cooling Pad", description: "Silent cooling pad with dual fans.", price: 22.99, rating: 4.0, imageUrl: "https://images.pexels.com/photos/18105/pexels-photo.jpg" },
+  { id: "SKU2013", name: "Smartphone Tripod Stand", description: "Flexible tripod for phones and cameras.", price: 14.99, rating: 4.1, imageUrl: "https://images.pexels.com/photos/1051073/pexels-photo-1051073.jpeg" },
+  { id: "SKU2014", name: "Wireless Earbuds", description: "True wireless earbuds with charging case.", price: 59.99, rating: 4.4, imageUrl: "https://images.pexels.com/photos/3945667/pexels-photo-3945667.jpeg" },
+  { id: "SKU2015", name: "Smart Home Plug", description: "Remote control your devices via mobile app.", price: 17.99, rating: 4.2, imageUrl: "https://images.pexels.com/photos/4790268/pexels-photo-4790268.jpeg" },
+  { id: "SKU2016", name: "External SSD 1TB", description: "High-speed portable SSD storage device.", price: 119.99, rating: 4.8, imageUrl: "https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg" },
+  { id: "SKU2017", name: "Wireless Charger Pad", description: "Fast wireless charging for compatible devices.", price: 25.99, rating: 4.3, imageUrl: "https://images.pexels.com/photos/404280/pexels-photo-404280.jpeg" },
+  { id: "SKU2018", name: "Smart Thermostat", description: "Energy-saving smart temperature control.", price: 149.99, rating: 4.5, imageUrl: "https://images.pexels.com/photos/256894/pexels-photo-256894.jpeg" },
+  { id: "SKU2019", name: "Drone with HD Camera", description: "Foldable drone with 1080p camera.", price: 179.99, rating: 4.4, imageUrl: "https://images.pexels.com/photos/442587/pexels-photo-442587.jpeg" },
+  { id: "SKU2020", name: "Portable Projector", description: "Mini HD projector for home cinema.", price: 139.99, rating: 4.3, imageUrl: "https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg" },
+  ]
+  const students = [
+  { name: "Luka", score: 92 },
+  { name: "Nino", score: 35 },
+  { name: "Giorgi", score: 78 },
+  { name: "Mariam", score: 48 },
+  { name: "Saba", score: 95 },
+  { name: "Ana", score: 73 }
+];
+  const [input, setInput] = useState("");
+  const [input2, setInput2] = useState("");
+
+  return (
+    <>
+      <div>
+        <input
+          type="password"
+          onInput={(e) => {
+            setInput(e.target.value);
+          }}
+          placeholder="Enter password"
+        ></input>
+        <Password input={input}></Password>
+      </div>
+      <div>
+        <input onInput={(e) => {setInput2(e.target.value)}} type="text" placeholder="Search"></input>
+        <Search input2={input2} products={products}></Search>
+      </div>
+      <div>
+        <Cart products={products}></Cart>
+      </div>
+      <div>
+        <Scores students={students}></Scores>
+      </div>
+    </>
+  );
+}
+
+export default App;
