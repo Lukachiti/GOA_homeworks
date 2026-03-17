@@ -1,0 +1,87 @@
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark; /* Force dark mode for a music app look */
+  background-color: #0f0f0f;
+  color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+
+  /* 1. Add your image path here */
+  
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+}
+
+/* Base button cleanup */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+/* Standardizing the Split Layout */
+.player-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.section-left, 
+.section-right {
+  flex: 1; /* Exactly 50% width */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Ensure the playlist doesn't overflow the screen height */
+.playlist-section {
+  width: 100%;
+  max-width: 450px;
+  max-height: 85vh; /* Playlist takes up most of the right side height */
+  overflow-y: auto;
+}
+
+/* Responsive: Stack them on top of each other on mobile */
+@media (max-width: 850px) {
+  .player-container {
+    flex-direction: column;
+    overflow-y: auto;
+    height: auto;
+  }
+  
+  .section-left, .section-right {
+    width: 100%;
+    min-height: auto;
+    padding: 1rem 0;
+  }
+  
+  .playlist-section {
+    max-height: 400px;
+    width: 90%;
+  }
+}

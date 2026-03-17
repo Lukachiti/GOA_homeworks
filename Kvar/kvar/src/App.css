@@ -1,0 +1,194 @@
+:root {
+  --primary: #646cff;
+  --primary-hover: #747bff;
+  --bg-card: #1a1a1a;
+  --bg-list: #242424;
+  --bg-item-hover: #2d2d2d;
+  --text-main: #ffffff;
+  --text-dim: #999;
+  --transition-speed: 0.3s;
+  --border-color: #333;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Layout Structure --- */
+
+.player-container {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--text-main);
+  display: flex;
+  width: 100%;
+  min-height: 100vh; /* Full screen height */
+  background-color: #0f0f0f; /* Subtle background for the whole page */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                    url('https://images.steamusercontent.com/ugc/2482119801773776416/BFA6FF41C25F8B46B554CCF3C3CB0CE7F8B24403/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true');
+
+  /* 2. Make sure the image covers the whole screen */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Keeps image still while playlist scrolls */
+  background-repeat: no-repeat;
+}
+
+/* These sections act as the "halves" of your screen */
+.section-left, 
+.section-right {
+  flex: 1; /* Give each side exactly 50% width */
+  display: flex;
+  align-items: center;    /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  padding: 2rem;
+}
+
+/* --- Left Side: Player Card --- */
+
+.player-card {
+  background: var(--bg-card);
+  padding: 2.5rem;
+  border-radius: 24px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  animation: slideUp 0.6s ease-out;
+  border: 1px solid var(--border-color);
+  width: 100%;
+  max-width: 420px; /* Limits size on large screens */
+}
+
+/* --- Right Side: Playlist Section --- */
+
+.playlist-section {
+  background: var(--bg-list);
+  border-radius: 24px;
+  border: 1px solid var(--border-color);
+  animation: slideUp 0.8s ease-out;
+  width: 100%;
+  max-width: 450px; /* Slightly wider than the card for comfort */
+  
+  /* Scroll logic */
+  max-height: 80vh; /* Takes up most of the vertical space */
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #444 var(--bg-list);
+}
+
+/* --- Elements & Buttons --- */
+
+.track-info h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  transition: color var(--transition-speed);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.track-info p {
+  color: var(--text-dim);
+  margin: 0.5rem 0 1.5rem 0;
+}
+
+.audio-element {
+  width: 100%;
+  filter: invert(100%) hue-rotate(180deg) brightness(1.5);
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+}
+
+.main-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.control-btn {
+  background: #2a2a2a;
+  border: none;
+  color: white;
+  padding: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.control-btn:hover {
+  background: #3a3a3a;
+  transform: scale(1.1);
+}
+
+.play-pause-btn {
+  background: var(--primary);
+  width: 65px;
+  height: 65px;
+  font-size: 1.2rem;
+}
+
+.shuffle-btn {
+  background: #333;
+  border: none;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.shuffle-btn.active {
+  background: var(--primary);
+  font-weight: bold;
+}
+
+/* --- Playlist Items --- */
+
+.playlist-item {
+  padding: 1.2rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease;
+}
+
+.playlist-item:hover {
+  background: var(--bg-item-hover);
+  padding-left: 2rem;
+}
+
+.playlist-item.active {
+  background: #333;
+  border-left: 6px solid var(--primary);
+}
+
+.song-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-main);
+}
+
+.song-artist {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  margin-top: 4px;
+}
+
+/* Custom Scrollbar */
+.playlist-section::-webkit-scrollbar { width: 6px; }
+.playlist-section::-webkit-scrollbar-track { background: var(--bg-list); }
+.playlist-section::-webkit-scrollbar-thumb { background: #444; border-radius: 10px; }
+.playlist-section::-webkit-scrollbar-thumb:hover { background: var(--primary); }
