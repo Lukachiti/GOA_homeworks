@@ -1,0 +1,22 @@
+const users = [
+  { "id": 1, "name": "Alex Rivera", "email": "alex.rivera@example.com", "role": "Admin" },
+  { "id": 2, "name": "Chloe Chen", "email": "chloe.chen@example.com", "role": "User" },
+  { "id": 3, "name": "Marcus Johnson", "email": "marcus.j@example.com", "role": "User" },
+  { "id": 4, "name": "Elena Rostova", "email": "elena.r@example.com", "role": "Moderator" },
+  { "id": 5, "name": "David Kim", "email": "david.kim@example.com", "role": "User" },
+  { "id": 6, "name": "Sarah Ahmed", "email": "sarah.a@example.com", "role": "User" },
+  { "id": 7, "name": "Oliver Bennett", "email": "oliver.b@example.com", "role": "User" },
+  { "id": 8, "name": "Sofia Martinez", "email": "sofia.m@example.com", "role": "Moderator" },
+  { "id": 9, "name": "Lucas Silva", "email": "lucas.silva@example.com", "role": "User" },
+  { "id": 10, "name": "Amina Diop", "email": "amina.diop@example.com", "role": "User" },
+  { "id": 11, "name": "Liam O'Connor", "email": "liam.oc@example.com", "role": "User" },
+  { "id": 12, "name": "Yuki Tanaka", "email": "yuki.t@example.com", "role": "Admin" },
+  { "id": 13, "name": "Emma Watson", "email": "emma.w@example.com", "role": "User" },
+  { "id": 14, "name": "Zayd Mansour", "email": "zayd.m@example.com", "role": "User" },
+  { "id": 15, "name": "Nina Novak", "email": "nina.n@example.com", "role": "User" },
+  { "id": 16, "name": "Julian Vega", "email": "julian.v@example.com", "role": "User" },
+  { "id": 17, "name": "Maya Lin", "email": "maya.lin@example.com", "role": "Moderator" },
+  { "id": 18, "name": "Ethan Hunt", "email": "ethan.h@example.com", "role": "User" },
+  { "id": 19, "name": "Zara Patel", "email": "zara.p@example.com", "role": "User" },
+  { "id": 20, "name": "Leo Dubois", "email": "leo.d@example.com", "role": "User" }
+]
