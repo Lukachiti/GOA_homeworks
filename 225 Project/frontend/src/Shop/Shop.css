@@ -1,0 +1,262 @@
+.shop-page {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #f9fafb;
+  min-height: 100vh;
+}
+
+.shop-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.hero-section {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: #ffffff;
+  text-align: center;
+}
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  z-index: 3;
+}
+
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #e5e7eb;
+}
+
+.controls-bar {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 250px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+}
+
+.sort-select {
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.shop-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 32px;
+}
+
+.shop-loading,
+.shop-error {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.25rem;
+}
+
+.shop-error {
+  color: #dc2626;
+}
+
+.inventory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.pc-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pc-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.pc-image-wrapper {
+  width: 100%;
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  background-color: #f3f4f6;
+}
+
+.pc-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pc-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 8px 0;
+}
+
+.pc-price {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #2563eb;
+  margin: 0 0 20px 0;
+}
+
+.specs-snapshot {
+  font-size: 0.95rem;
+  color: #4b5563;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.card-actions {
+  margin-top: auto;
+  display: flex;
+  gap: 12px;
+}
+
+.info-btn,
+.cart-btn {
+  flex: 1;
+  padding: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.info-btn {
+  background-color: #f3f4f6;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+
+.info-btn:hover {
+  background-color: #e5e7eb;
+}
+
+.cart-btn {
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+}
+
+.cart-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.expanded-details {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px dashed #e5e7eb;
+  background-color: #f9fafb;
+  padding: 16px;
+  border-radius: 8px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.expanded-details h4 {
+  margin: 0 0 10px 0;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.expanded-details ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #4b5563;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.pc-description {
+  margin: 12px 0 0 0;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+.no-results {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.2rem;
+  color: #6b7280;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

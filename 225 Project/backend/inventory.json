@@ -1,0 +1,87 @@
+[
+  {
+    "id": "1",
+    "name": "Apex Vanguard i7",
+    "price": 1499,
+    "description": "Built for high-refresh rate 1440p competitive gaming and seamless multitasking.",
+    "image": "https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=600&q=80",
+    "specs": {
+      "cpu": "Intel Core i7-14700K",
+      "gpu": "NVIDIA RTX 4070 Super 12GB",
+      "ram": "32GB DDR5 6000MHz",
+      "storage": "2TB NVMe M.2 SSD",
+      "motherboard": "Z790 Gaming WiFi",
+      "psu": "750W 80+ Gold Modular",
+      "case": "ATX Mid-Tower Airflow",
+      "cooling": "240mm AIO Liquid Cooler"
+    }
+  },
+  {
+    "id": "2",
+    "name": "Horizon Ryzen 5",
+    "price": 999,
+    "description": "Perfect entry-point for 1080p ultra settings gaming and streaming.",
+    "image": "https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&w=600&q=80",
+    "specs": {
+      "cpu": "AMD Ryzen 5 7600X",
+      "gpu": "AMD Radeon RX 7600 XT 16GB",
+      "ram": "16GB DDR5 5600MHz",
+      "storage": "1TB NVMe M.2 SSD",
+      "motherboard": "B650M AM5",
+      "psu": "650W 80+ Bronze",
+      "case": "Micro-ATX Compact Tower",
+      "cooling": "Tower Air Cooler"
+    }
+  },
+  {
+    "id": "3",
+    "name": "Quantum Titan v9",
+    "price": 3299,
+    "description": "Absolute enthusiast tier setup designed for 4K VR, heavy 3D rendering, and maxed out ray-tracing performance.",
+    "image": "https://images.unsplash.com/photo-1616440347437-b1c73416efc2?auto=format&fit=crop&w=600&q=80",
+    "specs": {
+      "cpu": "AMD Ryzen 7 7800X3D",
+      "gpu": "NVIDIA RTX 4090 24GB",
+      "ram": "64GB DDR5 6400MHz",
+      "storage": "4TB NVMe Gen5 M.2 SSD",
+      "motherboard": "X670E Carbon WiFi",
+      "psu": "1000W 80+ Platinum ATX 3.0",
+      "case": "Dual-Chamber Panoramic Glass Tower",
+      "cooling": "360mm Premium AIO Liquid Cooler"
+    }
+  },
+  {
+    "id": "4",
+    "name": "Swift Strike Core",
+    "price": 749,
+    "description": "Budget-focused build ideal for esports titles like Valorant, CS2, and Apex Legends.",
+    "image": "https://images.unsplash.com/photo-1587831990711-23ca6441447b?auto=format&fit=crop&w=600&q=80",
+    "specs": {
+      "cpu": "Intel Core i5-13400F",
+      "gpu": "NVIDIA RTX 4060 8GB",
+      "ram": "16GB DDR4 3200MHz",
+      "storage": "1TB NVMe M.2 SSD",
+      "motherboard": "B760M DDR4",
+      "psu": "550W 80+ Bronze",
+      "case": "Mini-ITX Minimalist Case",
+      "cooling": "Stock Air Cooler"
+    }
+  },
+  {
+    "id": "5",
+    "name": "Luminary Phantom Edition",
+    "price": 1850,
+    "description": "Balanced high-tier station sporting full addressable RGB lighting sync and premium airflow mechanics.",
+    "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=600&q=80",
+    "specs": {
+      "cpu": "AMD Ryzen 9 7900X",
+      "gpu": "NVIDIA RTX 4070 Ti Super 16GB",
+      "ram": "32GB DDR5 6000MHz",
+      "storage": "2TB NVMe M.2 SSD",
+      "motherboard": "B650 Tomahawk WiFi",
+      "psu": "850W 80+ Gold PCIe 5.0",
+      "case": "Full-Tower ARGB Mesh Case",
+      "cooling": "280mm AIO Liquid Cooler"
+    }
+  }
+]

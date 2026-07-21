@@ -1,10 +1,17 @@
 import { useState } from "react";
 import "./Navbar.css";
+import Image from "./../assets/Logo.webp";
 function Navbar() {
   return (
     <>
       <div className="navbar-container">
-        <h1 className="navbar-h1">PC MALL</h1>
+        <img
+          src={Image}
+          alt="Logo"
+          className="navbar-logo"
+        />  
+          
+        
         <nav className="navbar">
           <ul className="nav-links">
             <li>
