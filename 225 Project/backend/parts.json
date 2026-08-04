@@ -1,0 +1,25 @@
+{
+  "cpus": [
+    "Intel Core i5-13400F",
+    "Intel Core i7-14700K",
+    "AMD Ryzen 5 7600X",
+    "AMD Ryzen 7 7800X3D"
+  ],
+  "gpus": [
+    "NVIDIA RTX 4060 8GB",
+    "NVIDIA RTX 4070 Super 12GB",
+    "NVIDIA RTX 4090 24GB",
+    "AMD Radeon RX 7600 XT 16GB"
+  ],
+  "ram": [
+    "16GB DDR4 3200MHz",
+    "16GB DDR5 5600MHz",
+    "32GB DDR5 6000MHz",
+    "64GB DDR5 6400MHz"
+  ],
+  "storage": [
+    "1TB NVMe M.2 SSD",
+    "2TB NVMe M.2 SSD",
+    "4TB NVMe Gen5 M.2 SSD"
+  ]
+}

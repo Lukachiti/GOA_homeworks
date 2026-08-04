@@ -6,15 +6,12 @@ import Shop from "./Shop/Shop";
 import Customs from "./Customs/Customs";
 import Cart from "./Cart/Cart";
 import Support from "./Support/Support";
-import Hero from "./Hero/Hero";
+
 
 const router = createBrowserRouter([
+  
   {
     path: "/",
-    element: <Hero />,
-  },
-  {
-    path: "/shop",
     element: <Shop />,
   },
   {

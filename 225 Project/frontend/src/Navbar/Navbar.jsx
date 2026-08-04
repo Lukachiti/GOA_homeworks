@@ -14,11 +14,9 @@ function Navbar() {
         
         <nav className="navbar">
           <ul className="nav-links">
+            
             <li>
-              <a href="/">Hero</a>
-            </li>
-            <li>
-              <a href="/shop">Shop</a>
+              <a href="/">Shop</a>
             </li>
             <li>
               <a href="/customs">Customs</a>

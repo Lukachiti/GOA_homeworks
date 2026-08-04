@@ -11,8 +11,8 @@
 }
 
 .hero-section {
-  position: relative;
-  height: 400px;
+  margin-top: 80px;
+  height: 500px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -43,10 +43,11 @@
 
 .hero-overlay {
   position: absolute;
+  margin-top:55px;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height:500px;
   background: rgba(0, 0, 0, 0.55);
   z-index: 2;
 }
@@ -258,5 +259,14 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media only screen and (max-width: 670px){
+  .hero-section h1 {
+    font-size: 34px;
+  }
+  .hero-section p {
+    font-size: 15px;
   }
 }
