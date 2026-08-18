@@ -1,5 +1,5 @@
 function maintenanceM(req, res, next) {
-  if (Math.random() < 0.8) {
+  if (Math.random() > 0.8) {
     return {
       message: "Server is under maintenance",
     };

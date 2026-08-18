@@ -1,0 +1,12 @@
+[
+  {
+    "id": "CST-28470",
+    "createdAt": "2026-08-17T15:16:04.372Z",
+    "cpu": "Intel Core i7-14700K",
+    "gpu": "NVIDIA RTX 4090 24GB",
+    "ram": "32GB DDR5 6000MHz",
+    "storage": "4TB NVMe Gen5 M.2 SSD",
+    "notes": "idk",
+    "status": "Request Received"
+  }
+]

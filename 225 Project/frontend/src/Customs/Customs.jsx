@@ -22,6 +22,7 @@ function Customs() {
 
   const [loading, setLoading] = useState(true);
   const [submitted, setSubmitted] = useState(false);
+  const [requestId, setRequestId] = useState("");
 
   useEffect(() => {
     axios
@@ -47,8 +48,14 @@ function Customs() {
     e.preventDefault();
     axios
       .post("http://localhost:5000/api/customs", formData)
-      .then(() => {
+      .then((res) => {
         setSubmitted(true);
+        if (res.data.requestId) {
+          setRequestId(res.data.requestId);
+          const existing = JSON.parse(localStorage.getItem("my_custom_requests") || "[]");
+          existing.push(res.data.requestId);
+          localStorage.setItem("my_custom_requests", JSON.stringify(existing));
+        }
       })
       .catch((err) => {
         console.error("Failed to send custom request:", err);
@@ -77,7 +84,8 @@ function Customs() {
 
           {submitted ? (
             <div className="customs-status success">
-              Your custom request has been sent! We will reach out shortly.
+              Your custom request has been sent!
+              {requestId && <p><strong>Request ID:</strong> {requestId}</p>}
             </div>
           ) : (
             <form className="customs-form" onSubmit={handleSubmit}>

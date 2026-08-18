@@ -27,6 +27,8 @@ app.get('/movies', ageM, (req, res) => {
 app.get('/profile', tokenM, (req, res) => {
   res.send('User Profile');
 });
+ 
+
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}. You were successful! Yupeeee`);
 });

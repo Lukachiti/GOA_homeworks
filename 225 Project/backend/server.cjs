@@ -1,79 +1,96 @@
 const express = require("express");
+const cors = require("cors");
 const fs = require("fs");
 const path = require("path");
-const cors = require("cors");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-const DATA_FILE = path.join(__dirname, "inventory.json");
-const PARTS_FILE = path.join(__dirname, "parts.json");
-
+// Middleware
 app.use(cors());
 app.use(express.json());
 
-// ==========================================
-// HELPER FUNCTIONS
-// ==========================================
+// JSON File Paths
+const partsFilePath = path.join(__dirname, "parts.json");
+const customsFilePath = path.join(__dirname, "customs.json");
+const prebuildsFilePath = path.join(__dirname, "prebuilds.json");
+const supportFilePath = path.join(__dirname, "support.json");
+const ordersFilePath = path.join(__dirname, "orders.json");
 
-const readInventory = () => {
+// Helper Utilities for Safe File Reading/Writing
+const readJSON = (filePath, fallback = []) => {
+  if (!fs.existsSync(filePath)) {
+    fs.writeFileSync(filePath, JSON.stringify(fallback, null, 2));
+    return fallback;
+  }
   try {
-    if (!fs.existsSync(DATA_FILE)) {
-      return [];
-    }
-    const data = fs.readFileSync(DATA_FILE, "utf8");
-    return JSON.parse(data || "[]");
-  } catch (error) {
-    console.error("Error reading inventory file:", error);
-    return [];
+    const data = fs.readFileSync(filePath, "utf8");
+    return JSON.parse(data);
+  } catch (err) {
+    console.error(`Error reading ${filePath}:`, err);
+    return fallback;
   }
 };
 
-const writeInventory = (data) => {
+const writeJSON = (filePath, data) => {
   try {
-    fs.writeFileSync(DATA_FILE, JSON.stringify(data, null, 2), "utf8");
+    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
     return true;
-  } catch (error) {
-    console.error("Error writing to inventory file:", error);
+  } catch (err) {
+    console.error(`Error writing ${filePath}:`, err);
     return false;
   }
 };
 
-const readParts = () => {
-  try {
-    if (!fs.existsSync(PARTS_FILE)) {
-      return { cpus: [], gpus: [], ram: [], storage: [] };
-    }
-    const data = fs.readFileSync(PARTS_FILE, "utf8");
-    return JSON.parse(data || "{}");
-  } catch (error) {
-    console.error("Error reading parts database:", error);
-    return { cpus: [], gpus: [], ram: [], storage: [] };
-  }
+// Generate Short Unique Order / Ticket IDs
+const generateID = (prefix = "ORD") => {
+  const randomNum = Math.floor(10000 + Math.random() * 90000);
+  return `${prefix}-${randomNum}`;
 };
 
 // ==========================================
-// PREBUILDS ENDPOINTS
+// 1. HARDWARE PARTS API
 // ==========================================
+app.get("/api/parts", (req, res) => {
+  const defaultParts = {
+    cpus: [
+      "Intel Core i5-13600K",
+      "Intel Core i7-14700K",
+      "AMD Ryzen 5 7600X",
+      "AMD Ryzen 7 7800X3D",
+    ],
+    gpus: [
+      "NVIDIA RTX 4060 8GB",
+      "NVIDIA RTX 4070 Super 12GB",
+      "NVIDIA RTX 4090 24GB",
+      "AMD Radeon RX 7800 XT 16GB",
+    ],
+    ram: [
+      "16GB DDR5 5600MHz",
+      "32GB DDR5 6000MHz",
+      "64GB DDR5 6400MHz",
+    ],
+    storage: [
+      "1TB NVMe M.2 SSD",
+      "2TB NVMe M.2 SSD",
+      "4TB NVMe M.2 SSD",
+    ],
+  };
 
-app.get("/api/prebuilds", (req, res) => {
-  const inventory = readInventory();
-  res.json(inventory);
+  const parts = readJSON(partsFilePath, defaultParts);
+  res.json(parts);
 });
 
-app.get("/api/prebuilds/:id", (req, res) => {
-  const inventory = readInventory();
-  const pc = inventory.find((item) => item.id === req.params.id);
-
-  if (!pc) {
-    return res.status(404).json({ error: "Product not found" });
-  }
-
-  res.json(pc);
+// ==========================================
+// 2. PREBUILDS INVENTORY API
+// ==========================================
+app.get("/api/prebuilds", (req, res) => {
+  const prebuilds = readJSON(prebuildsFilePath, []);
+  res.json(prebuilds);
 });
 
 app.post("/api/prebuilds", (req, res) => {
-  const inventory = readInventory();
+  const inventory = readJSON(prebuildsFilePath, []);
   const { name, price, description, image, specs } = req.body;
 
   if (!name || !price || !specs) {
@@ -102,7 +119,7 @@ app.post("/api/prebuilds", (req, res) => {
 
   inventory.push(newPc);
 
-  if (writeInventory(inventory)) {
+  if (writeJSON(prebuildsFilePath, inventory)) {
     res.status(201).json(newPc);
   } else {
     res.status(500).json({ error: "Failed to save item to database" });
@@ -110,42 +127,152 @@ app.post("/api/prebuilds", (req, res) => {
 });
 
 // ==========================================
-// CUSTOM BUILD PARTS ENDPOINTS
+// 3. CUSTOM PC REQUESTS API
 // ==========================================
-
-app.get("/api/parts", (req, res) => {
-  const parts = readParts();
-  res.json(parts);
-});
-
 app.post("/api/customs", (req, res) => {
   const { cpu, gpu, ram, storage, notes } = req.body;
-  console.log("Received Custom Build Request:", { cpu, gpu, ram, storage, notes });
 
-  res.status(201).json({
-    message: "Custom request received successfully!",
-    request: req.body,
-  });
+  if (!cpu || !gpu || !ram || !storage) {
+    return res
+      .status(400)
+      .json({ error: "Please select all required hardware parts." });
+  }
+
+  const customsList = readJSON(customsFilePath, []);
+  const requestId = generateID("CST");
+
+  const newCustomRequest = {
+    id: requestId,
+    createdAt: new Date().toISOString(),
+    cpu,
+    gpu,
+    ram,
+    storage,
+    notes: notes || "",
+    status: "Request Received",
+  };
+
+  customsList.push(newCustomRequest);
+
+  if (writeJSON(customsFilePath, customsList)) {
+    res.status(201).json({
+      message: "Custom request submitted successfully!",
+      requestId,
+      request: newCustomRequest,
+    });
+  } else {
+    res.status(500).json({ error: "Failed to save custom request" });
+  }
 });
 
 // ==========================================
-// SUPPORT ENDPOINT
+// 4. CHECKOUT & ORDER TRACKING API (NO ACCOUNTS)
 // ==========================================
 
+// Create a new purchase
+app.post("/api/orders", (req, res) => {
+  const { customer, items, totalAmount } = req.body;
+
+  if (!customer?.email || !items || items.length === 0) {
+    return res
+      .status(400)
+      .json({ error: "Customer email and items are required" });
+  }
+
+  const orders = readJSON(ordersFilePath, []);
+  const orderId = generateID("ORD");
+
+  const newOrder = {
+    orderId,
+    createdAt: new Date().toISOString(),
+    customer: {
+      name: customer.name || "Valued Customer",
+      email: customer.email,
+      phone: customer.phone || "",
+      address: customer.address || "",
+    },
+    items,
+    totalAmount: Number(totalAmount) || 0,
+    status: "Processing", // Statuses: Processing -> Assembling -> Shipped -> Delivered
+    trackingSteps: [
+      { step: "Order Placed", completed: true, timestamp: new Date().toISOString() },
+      { step: "Components Allocation", completed: false },
+      { step: "Assembly & Testing", completed: false },
+      { step: "Out for Delivery", completed: false },
+    ],
+  };
+
+  orders.push(newOrder);
+
+  if (writeJSON(ordersFilePath, orders)) {
+    res.status(201).json({
+      message: "Order placed successfully!",
+      orderId,
+      order: newOrder,
+    });
+  } else {
+    res.status(500).json({ error: "Failed to record order" });
+  }
+});
+
+// Track Order by ID or Email
+app.get("/api/orders/track/:query", (req, res) => {
+  const { query } = req.params;
+  const orders = readJSON(ordersFilePath, []);
+
+  // Search by exact Order ID or by matching Customer Email
+  const matchedOrders = orders.filter(
+    (o) =>
+      o.orderId.toLowerCase() === query.toLowerCase() ||
+      o.customer.email.toLowerCase() === query.toLowerCase()
+  );
+
+  if (matchedOrders.length === 0) {
+    return res.status(404).json({ error: "No orders found matching that ID or email" });
+  }
+
+  res.json(matchedOrders);
+});
+
+// ==========================================
+// 5. SUPPORT TICKETS API
+// ==========================================
 app.post("/api/support", (req, res) => {
   const { name, email, issueType, description } = req.body;
-  console.log("Received Support Ticket:", { name, email, issueType, description });
 
-  res.status(201).json({
-    message: "Support ticket opened successfully!",
-    ticket: req.body,
-  });
+  if (!name || !email || !description) {
+    return res
+      .status(400)
+      .json({ error: "Name, email, and description are required" });
+  }
+
+  const tickets = readJSON(supportFilePath, []);
+  const ticketId = generateID("TCK");
+
+  const newTicket = {
+    ticketId,
+    createdAt: new Date().toISOString(),
+    name,
+    email,
+    issueType: issueType || "general",
+    description,
+    status: "Open",
+  };
+
+  tickets.push(newTicket);
+
+  if (writeJSON(supportFilePath, tickets)) {
+    res.status(201).json({
+      message: "Support ticket created!",
+      ticketId,
+      ticket: newTicket,
+    });
+  } else {
+    res.status(500).json({ error: "Failed to save support ticket" });
+  }
 });
 
-// ==========================================
-// START SERVER
-// ==========================================
-
+// Start Express Server
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`PC Mall Backend running on http://localhost:${PORT}`);
 });
