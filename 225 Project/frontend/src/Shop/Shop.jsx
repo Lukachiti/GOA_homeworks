@@ -11,8 +11,6 @@ function Shop() {
 
   const [searchTerm, setSearchTerm] = useState("");
   const [sortBy, setSortBy] = useState("default");
-  
-
 
   useEffect(() => {
     axios
@@ -141,7 +139,36 @@ function Shop() {
                       ? "Hide Details ▲"
                       : "More Info ▼"}
                   </button>
-                  <button className="cart-btn">Add to Cart</button>
+                  <button
+                    className="cart-btn"
+                    onClick={() => {
+                      let sessionId = localStorage.getItem("cart_session_id");
+                      if (!sessionId) {
+                        sessionId =
+                          "sess_" + Math.random().toString(36).substring(2, 11);
+                        localStorage.setItem("cart_session_id", sessionId);
+                      }
+
+                      axios
+                        .post("http://localhost:5000/api/cart/add", {
+                          sessionId,
+                          product: {
+                            id: pc._id || pc.id,
+                            name: pc.title || pc.name,
+                            price: pc.price,
+                            image: pc.image,
+                          },
+                        })
+                        .then(() =>
+                          alert(`${pc.title || pc.name} added to cart!`),
+                        )
+                        .catch((err) =>
+                          console.error("Failed to add to cart:", err),
+                        );
+                    }}
+                  >
+                    Add to Cart
+                  </button>
                 </div>
 
                 {expandedId === (pc._id || pc.id) && (

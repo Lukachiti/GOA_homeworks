@@ -1,6 +1,4 @@
-/**
- * Initializes the MinStack object.
- */
+
 var MinStack = function() {
     // Primary stack to store all pushed elements in LIFO order
     this.stack = [];
